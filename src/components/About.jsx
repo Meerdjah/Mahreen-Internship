@@ -12,12 +12,12 @@ export default function About() {
     },
     { 
       title: "Arsitektur Backend Tangguh", 
-      desc: "Keindahan visual harus didukung oleh mesin yang kuat. Kami fokus pada pengelolaan data yang efisien dan alur komunikasi server yang anti-kritis.",
+      desc: "Keindahan visual harus didukung oleh mesin yang kuat. Kami fokus pada pengelolaan data yang efisien dan alur komunikasi server yang andal.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034"
     },
     { 
       title: "Automasi & Efisiensi", 
-      desc: "Memanfaatkan logika pemrograman untuk memangkas proses manual yang repetitif. Sistem yang baik adalah sistem yang bekerja keras secara mandiri.",
+      desc: "Memanfaatkan logika pemrograman untuk otomatisasi tugas repetitif. Sistem yang baik adalah sistem yang bekerja keras secara mandiri.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070"
     },
     { 
@@ -27,12 +27,12 @@ export default function About() {
     },
     { 
       title: "Integrasi Skala Luas", 
-      desc: "Dari platform web ke perangkat keras fisik di lapangan, kami memastikan sinkronisasi data terjadi secara real-time tanpa latensi yang berarti.",
+      desc: "Dari platform web ke hardware fisik di lapangan, kami memastikan sinkronisasi data terjadi secara real-time tanpa latensi yang terasa.",
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070"
     },
     { 
       title: "Dampak Berkelanjutan", 
-      desc: "Teknologi bukanlah tujuan akhir, melainkan alat. Fokus utama kami adalah memastikan setiap produk digital memberikan manfaat nyata dan berjangka panjang bagi Indonesia.",
+      desc: "Teknologi bukanlah tujuan akhir, melainkan alat untuk mencapai tujuan tersebut. Fokus utama kami adalah memastikan setiap produk digital memberikan manfaat nyata dan berjangka panjang bagi Indonesia.",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072"
     }
   ];

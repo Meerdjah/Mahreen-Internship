@@ -42,13 +42,13 @@ export default function Navbar() {
             >
               <div className="py-2">
                 <a href="#iot" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                  Sistem IoT Terpadu
+                  Internet of Things
                 </a>
                 <a href="#cyber" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                  Keamanan Sistem
+                  Cybersecurity
                 </a>
                 <a href="#health" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                  Pemantauan Kesehatan
+                  Health Monitoring
                 </a>
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
           <a href="#cta" className="hover:text-blue-600 transition-colors">Kontribusi</a>
         </div>
 
-        {/* Mobile Hamburger Button */}
+        {/* Mobile Dropdown Button */}
         <button 
           className="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -86,9 +86,9 @@ export default function Navbar() {
           <div className="border-t border-gray-100 pt-4">
             <span className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-4 block">Fokus Area</span>
             <div className="flex flex-col gap-4 pl-2">
-              <a href="#iot" onClick={() => setIsMobileMenuOpen(false)} className="text-sm hover:text-blue-600">Sistem IoT Terpadu</a>
-              <a href="#cyber" onClick={() => setIsMobileMenuOpen(false)} className="text-sm hover:text-blue-600">Keamanan Sistem</a>
-              <a href="#health" onClick={() => setIsMobileMenuOpen(false)} className="text-sm hover:text-blue-600">Pemantauan Kesehatan</a>
+              <a href="#iot" onClick={() => setIsMobileMenuOpen(false)} className="text-sm hover:text-blue-600">Internet of Things</a>
+              <a href="#cyber" onClick={() => setIsMobileMenuOpen(false)} className="text-sm hover:text-blue-600">Cybersecurity</a>
+              <a href="#health" onClick={() => setIsMobileMenuOpen(false)} className="text-sm hover:text-blue-600">Health Monitoring</a>
             </div>
           </div>
 

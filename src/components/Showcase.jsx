@@ -37,7 +37,7 @@ export default function Showcase() {
   return (
     <section className="relative w-full h-[70vh] min-h-150 bg-gray-950 overflow-hidden flex items-center">
       
-      {/* 1. The Melting Background Images */}
+      {/* Background Images */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeIndex}
@@ -47,22 +47,17 @@ export default function Showcase() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full"
         >
-          {/* Centered the object position on mobile, kept it right on desktop */}
           <img 
             src={slides[activeIndex].image} 
             alt={slides[activeIndex].title} 
             className="absolute inset-0 w-full h-full object-cover object-center md:object-right"
           />
-          
-          {/* THE FIX: Much lighter tint on mobile (from-gray-950/60). Desktop keeps the solid melt. */}
           <div className="absolute inset-0 bg-linear-to-r from-gray-950/60 to-transparent md:from-gray-950 md:via-gray-950/80"></div>
-          
-          {/* THE FIX: Strong vertical bottom-to-top gradient on mobile only to protect the text */}
           <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-gray-950/90 to-transparent md:hidden"></div>
         </motion.div>
       </AnimatePresence>
 
-      {/* 2. The Text Content */}
+      {/* Text Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col justify-center">
         <div className="max-w-2xl">
           <span className="text-blue-500 font-bold tracking-widest text-sm uppercase mb-4 block">
@@ -86,7 +81,7 @@ export default function Showcase() {
             </motion.div>
           </AnimatePresence>
 
-          {/* 3. Navigation Controls (Dots) */}
+          {/* Navigation Controls (Dots) */}
           <div className="flex gap-4 items-center">
             {slides.map((_, idx) => (
               <button
