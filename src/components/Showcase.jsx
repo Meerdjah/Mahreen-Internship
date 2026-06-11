@@ -27,7 +27,6 @@ export default function Showcase() {
     }
   ];
 
-  // Optional: Auto-play functionality. It changes the slide every 5 seconds.
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((current) => (current === slides.length - 1 ? 0 : current + 1));
@@ -56,10 +55,10 @@ export default function Showcase() {
           />
           
           {/* THE FIX: Much lighter tint on mobile (from-gray-950/60). Desktop keeps the solid melt. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/60 to-transparent md:from-gray-950 md:via-gray-950/80"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-gray-950/60 to-transparent md:from-gray-950 md:via-gray-950/80"></div>
           
           {/* THE FIX: Strong vertical bottom-to-top gradient on mobile only to protect the text */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/90 to-transparent md:hidden"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-gray-950/90 to-transparent md:hidden"></div>
         </motion.div>
       </AnimatePresence>
 

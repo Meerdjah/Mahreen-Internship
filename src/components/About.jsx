@@ -41,21 +41,17 @@ export default function About() {
     <section id="about" className="py-24 px-6 max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-16 items-center">
         
-        {/* Left Column: Image Crossfader (Now Sticky on Mobile) */}
-        {/* Added 'sticky top-20 z-10 bg-white pb-4' so it anchors to the screen */}
+        {/* Left side */}
         <div className="lg:w-1/2 w-full space-y-4 md:space-y-8 sticky top-20 z-10 bg-white pb-4 pt-2">
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-2 md:mb-4 leading-tight">
               Tentang <br className="hidden md:block"/> Program
             </h2>
-            {/* We hide this subtext on mobile so the image stays higher up */}
             <p className="text-gray-600 text-base md:text-lg leading-relaxed hidden md:block">
               Program internship ini dirancang bagi pemikir kritis yang tidak hanya bisa merangkai logika, tapi juga menerapkannya menjadi arsitektur sistem yang utuh.
             </p>
           </div>
-          
-          {/* Shorter height on mobile (h-[250px]) so the user can still see the accordion below it */}
-          <div className="w-full h-[250px] md:h-[400px] bg-gray-200 rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl relative">
+          <div className="w-full h-62.5 md:h-100 bg-gray-200 rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl relative">
             <AnimatePresence mode="wait">
               <motion.img 
                 key={activeIndex}
@@ -68,7 +64,7 @@ export default function About() {
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
               />
             </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent pointer-events-none"></div>
             
             <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 text-white pointer-events-none">
                <span className="text-xs md:text-sm font-bold tracking-widest text-blue-400">0{activeIndex + 1}</span>
@@ -77,7 +73,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Column: Interactive Accordion */}
+        {/* Right side */}
         <div className="lg:w-1/2 w-full flex flex-col gap-4">
           {advantages.map((adv, idx) => (
             <div 
@@ -95,15 +91,12 @@ export default function About() {
                 }`}>
                   {adv.title}
                 </h3>
-                {/* Visual Indicator (Plus/Minus icon) */}
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
                   activeIndex === idx ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-500'
                 }`}>
                   {activeIndex === idx ? '−' : '+'}
                 </div>
               </div>
-
-              {/* Smooth Dropdown for the Description */}
               <AnimatePresence>
                 {activeIndex === idx && (
                   <motion.div
